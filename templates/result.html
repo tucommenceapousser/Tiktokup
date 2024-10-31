@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultat d'Optimisation</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #eee;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #ff005a;
+        }
+        video, img {
+            margin: 20px 0;
+            border: 2px solid #ff005a;
+        }
+    </style>
+</head>
+<body>
+    <h2>Contenu Original</h2>
+    <p>{{ original_content }}</p>
+
+    <h2>Texte Optimisé</h2>
+    <p>{{ suggestion }}</p>
+
+    <div class="transcription-section">
+        <h2>Transcription</h2>
+        <div class="transcription-box">
+            {{ transcription if transcription else "Aucune transcription disponible" }}
+        </div>
+    </div>
+
+    <h2>Image Générée</h2>
+    <img src="{{ image_url }}" width="512" height="512">
+
+    <h2>Vidéo Générée</h2>
+    <video width="512" controls>
+        <source src="{{ video_url }}" type="video/mp4">
+        Votre navigateur ne supporte pas la balise vidéo.
+    </video>
+</body>
+</html>

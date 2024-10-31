@@ -1,0 +1,83 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Content Optimizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <div class="logo">TikTok Optimizer</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="content-grid">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h3>Navigation</h3>
+                <ul class="sidebar-menu">
+                    <li><i class="fas fa-home"></i> Accueil</li>
+                    <li><i class="fas fa-chart-line"></i><a href="#contact" id="contact">Contact</a></li>
+                    <li><i class="fas fa-cog"></i> Paramètres</li>
+                </ul>
+            </div>
+
+            <!-- Main Form -->
+            <div class="form-container">
+                <h1>Optimisation de Contenu TikTok</h1>
+                <form id="contentForm" action="{{ url_for('optimize_content') }}" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="content">Contenu TikTok</label>
+                        <textarea id="content" name="content" rows="5" placeholder="Entrez votre description..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image_theme">Thème de l'image</label>
+                        <input type="text" id="image_theme" name="image_theme" placeholder="Ex: sunset, dance">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="audio_file">Audio/Vidéo</label>
+                        <input type="file" id="audio_file" name="audio_file" accept="audio/*,video/*">
+                    </div>
+
+                    <button type="submit" class="btn">
+                        <i class="fas fa-magic"></i> Optimiser
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact" id="contact">
+        <h2>Contactez-nous</h2>
+        <p>Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter.</p>
+        <a href="mailto:tugrp@example.com">contact@tiktok-optimizer.com</a>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 TikTok Optimizer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contentForm').onsubmit = function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            btn.innerHTML = '<div class="spinner"></div>';
+            btn.disabled = true;
+
+            // Simulate processing (replace with actual form submission)
+            setTimeout(() => {
+                this.submit();
+            }, 1000);
+        };
+    </script>
+</body>
+</html>
