@@ -33,8 +33,8 @@ pip install -r requirements.txt
 1. Clonez le dépôt :
 
     ```bash
-    git clone https://votre-repo-url.git
-    cd votre-dossier
+    git clone https://github.com/tucommenceapousser/Tiktokup
+    cd Tiktokup
     ```
 
 2. Créez un fichier `.env` à la racine de votre projet et ajoutez vos clés API :
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 1. Démarrez l'application Flask :
 
     ```bash
-    python app.py
+    python main.py
     ```
 
 2. Ouvrez votre navigateur et allez à `http://127.0.0.1:8080`.
@@ -66,7 +66,7 @@ Si vous souhaitez contribuer à ce projet, n'hésitez pas à ouvrir une issue ou
 
 ## Auteurs
 
-Votre Nom - Votre Profil GitHub
+TRHACKNON - https://github.com/tucommenceapousser
 
 ## License
 
