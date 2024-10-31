@@ -153,7 +153,7 @@ def optimize_content():
     image_path = generate_image(image_theme)
 
     # Génération de la voix avec Eleven Labs
-    audio_path = generate_voice_eleven_labs(suggestion)
+    audio_path = generate_voice_eleven_labs(transcription_text)  # Utiliser la transcription comme texte pour la voix
 
     # Création de la vidéo
     video_path = create_video(image_path, audio_path, suggestion)
