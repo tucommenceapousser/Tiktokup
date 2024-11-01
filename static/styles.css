@@ -4,6 +4,7 @@
   --primary: #fe2c55;
   --secondary: #25F4EE;
   --dark: #111;
+  --darknest: #00022e;
   --light: #8363ff;
   --highlight: #ff005a;
   --yellow: #FFD700;
@@ -163,7 +164,7 @@ input[type="text"]:focus {
   box-shadow: 0 0 10px var(--highlight);
   transform: scale(1.05);
   background: var(--highlight);
-  color: var(--purple);
+  color: var(--primary);
   border: 2px solid var(--border-fluo);
 }
 
@@ -334,7 +335,7 @@ p {
   flex: 1;
   line-height: 0.75;
   margin: auto;
-  color: #000000;
+  color: var(--darknest);
   text-align: center;
   transform: scaleX(var(--scale, 1));
   animation: glitch-p 11s infinite alternate;
