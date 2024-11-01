@@ -335,7 +335,7 @@ p {
   flex: 1;
   line-height: 0.75;
   margin: auto;
-  color: var(--darknest);
+  color: var(--purple);
   text-align: center;
   transform: scaleX(var(--scale, 1));
   animation: glitch-p 11s infinite alternate;
