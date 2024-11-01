@@ -6,14 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikTok Content Optimizer</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='gli.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='links.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/v4-shims.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav-bar">
         <div class="nav-content">
             <div class="logo">TikTok Optimizer</div>
-        </div>
+            </div>
+            <div class="nav-content">
+        <p data-text="TRHACKNON">TRHACKNON</p>
+            </div>
     </nav>
 
     <!-- Main Content -->
@@ -23,14 +30,14 @@
             <div class="sidebar">
                 <h3>Navigation</h3>
                 <ul class="sidebar-menu">
-                    <li><i class="fas fa-home"></i> Accueil</li>
-                    <li><i class="fas fa-chart-line"></i><a href="#contact" id="contact">Contact</a></li>
-                    <li><i class="fas fa-cog"></i> Paramètres</li>
+                    <li><i class="fas fa-home"></i><a href="#Optimisation">Optimisation</a></li>
+                    <li><i class="fas fa-chart-line"></i><a href="#contact">Contact</a></li>
+                    <li><i class="fas fa-cog"></i><a href="#footer">Footer</a></li>
                 </ul>
             </div>
 
             <!-- Main Form -->
-            <div class="form-container">
+            <div class="form-container" id="Optimisation">
                 <h1>Optimisation de Contenu TikTok</h1>
                 <form id="contentForm" action="{{ url_for('optimize_content') }}" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
@@ -56,21 +63,30 @@
         </div>
     </div>
 
-    <div class="contact" id="contact">
-        <h2>Contactez-nous</h2>
+    <!-- Contact Section -->
+        <div class="social-container">
+            <h2>Suivez-moi sur</h2>
         <p>Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter.</p>
-        <a href="mailto:tugrp@example.com">contact@tiktok-optimizer.com</a>
-    </div>
+        <a href="mailto:jeremydiliotti@gmail.com">contact@replit.com/@trkn/Tiktokup</a>
+        <div class="social-icons">
+            <a href="https://github.com/tucommenceapousser/Tiktokup" class="social-icon" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+=            </a>
+        </div></div>
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
+        <div class="footer-content">
         <p>&copy; 2024 TikTok Optimizer. All rights reserved.</p>
+        </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
         document.getElementById('contentForm').onsubmit = function(e) {
             e.preventDefault();
             const btn = this.querySelector('button[type="submit"]');
-            btn.innerHTML = '<div class="spinner"></div>';
+            btn.innerHTML = '<div class="spinner"></div>'; // Assurez-vous que .spinner est défini dans le CSS
             btn.disabled = true;
 
             // Simulate processing (replace with actual form submission)
@@ -79,5 +95,6 @@
             }, 1000);
         };
     </script>
-</body>
-</html>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </body>
+    </html>
